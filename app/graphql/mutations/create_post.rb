@@ -1,6 +1,14 @@
 module Mutations
   # inherit Mutations::BaseMutation
   class CreatePost < Mutations::BaseMutation
+    def ready?(**_args)
+      if !context[:current_user]
+        raise GraphQL::ExecutionError, "You need to login!"
+      else
+        true
+      end
+    end
+
     # Define what type of value to be returned
     field :post, Types::PostType, null: false
 
@@ -9,9 +17,8 @@ module Mutations
     argument :body, String, required: true
 
     def resolve(title:, body:)
-      # we will use current_user in future
-      user = User.first
-      post = user.posts.new(title: title, body: body)
+      # you can access current_user in context like this
+      post = context[:current_user].posts.new(title: title, body: body)
       # Here returns post field, which is defined above.
       if post.save
         {
