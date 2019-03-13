@@ -6,6 +6,7 @@ module Mutations
 
     # Define what argument this mutation accepts
     argument :id, ID, required: true
+    # Here we use input objects for practice
     argument :attributes, Types::PostAttributes, required: true
 
     def resolve(id:, attributes:)
