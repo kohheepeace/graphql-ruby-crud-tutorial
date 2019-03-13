@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::API
   def current_user
     # If test situation when user is logged in
-    # User.first
+    User.first
 
     # If test situation when user is not logged in
-    nil
+    # nil
   end
 
   # This is actual my current_user method
