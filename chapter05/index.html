@@ -462,7 +462,7 @@
 </div>
 <p>In this chapter we will implement the feature to create a new post.</p>
 <h2 id="step1-run-generator-command">Step1. Run generator command</h2>
-<p><img alt="01" src="./docs/img/05-mutation-create/01.png" />
+<p><img alt="01" src="../img/05-mutation-create/01.png" />
 <a href="https://graphql-ruby.org/schema/generators.html#scaffolding-mutations">https://graphql-ruby.org/schema/generators.html#scaffolding-mutations</a></p>
 <p><code class="codehilite"><span class="n">terminal</span></code>
 <div class="codehilite"><pre><span></span>rails g graphql:mutation create_post
@@ -505,7 +505,7 @@ add_root_type  mutation
 <span class="k">end</span>
 </pre></div></p>
 <h2 id="step2-create-base_mutationrb">Step2. Create <code class="codehilite"><span class="n">base_mutation</span><span class="p">.</span><span class="n">rb</span></code></h2>
-<p><img alt="02" src="./docs/img/05-mutation-create/02.png" /></p>
+<p><img alt="02" src="../img/05-mutation-create/02.png" /></p>
 <p><a href="https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class">https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class</a></p>
 <p>Create <code class="codehilite"><span class="n">graphql</span><span class="o">/</span><span class="n">mutations</span><span class="o">/</span><span class="n">base_mutation</span><span class="p">.</span><span class="n">rb</span></code></p>
 <div class="codehilite"><pre><span></span><span class="c1"># We use GraphQL::Schema::Mutation not GraphQL::Schema::RelayClassicMutation# Because I use apollo-client</span>
@@ -514,7 +514,7 @@ add_root_type  mutation
 </pre></div>
 
 <h2 id="step3-modify-mutationscreate_postrb">Step3. Modify /mutations/create_post.rb</h2>
-<p><img alt="03" src="./docs/img/05-mutation-create/03.png" />
+<p><img alt="03" src="../img/05-mutation-create/03.png" />
 <a href="https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class">https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class</a></p>
 <p>Just imitate official docs.</p>
 <p><code class="codehilite"><span class="n">mutations</span><span class="o">/</span><span class="n">create_post</span><span class="p">.</span><span class="n">rb</span></code>
@@ -551,9 +551,9 @@ add_root_type  mutation
 </pre></div></p>
 <h2 id="step4-test-in-grahpiql">Step4 Test in grahpiql</h2>
 <h3 id="1-createpost-mutation">1. createPost mutation</h3>
-<p><img alt="04" src="./docs/img/05-mutation-create/04.png" /></p>
+<p><img alt="04" src="../img/05-mutation-create/04.png" /></p>
 <h3 id="2-query-posts-again">2. query posts again</h3>
-<p><img alt="05" src="./docs/img/05-mutation-create/05.png" /></p>
+<p><img alt="05" src="../img/05-mutation-create/05.png" /></p>
 <p>Finish!</p>
                 
                   

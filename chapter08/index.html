@@ -494,14 +494,14 @@
 <p>Official docs guide recommends...
 1. Loading and authorizing objects
 2. Then, call def authorized? to check user can perform this action</p>
-<p><img alt="01" src="./docs/img/08-authorization/01.png" />
+<p><img alt="01" src="../img/08-authorization/01.png" />
 <a href="https://graphql-ruby.org/mutations/mutation_authorization.html">https://graphql-ruby.org/mutations/mutation_authorization.html</a></p>
 <h2 id="step2-butthis-is-really-confusing-and-it-works-only-for-relay">Step2. But...this is really confusing and it works only for Relay ?</h2>
 <p>*If you have better knowledge, please let me know!!</p>
 <p>So, I take another option.</p>
 <p>Look at below issue comment...</p>
 <p>@rmosolgo says <strong>"Current best practice is to put auth code at the top of the resolve function"</strong>
-<img alt="02" src="./docs/img/08-authorization/02.png" /></p>
+<img alt="02" src="../img/08-authorization/02.png" /></p>
 <p>Though, this is already "past" best practice, I tried this and it works well. So, I will take this option.</p>
 <h2 id="step3-modify-update_postrb">Step3 Modify <code class="codehilite"><span class="n">update_post</span><span class="p">.</span><span class="n">rb</span></code></h2>
 <p><code class="codehilite"><span class="n">update_post</span><span class="p">.</span><span class="n">rb</span></code>
@@ -575,9 +575,9 @@
 </pre></div>
 
 <h3 id="2-if-not-logged-in">2 If not logged in</h3>
-<p><img alt="03" src="./docs/img/08-authorization/03.png" /></p>
+<p><img alt="03" src="../img/08-authorization/03.png" /></p>
 <h3 id="3-if-logged-in-and-update-others-post">3 If logged in and Update other's post</h3>
-<p><img alt="04" src="./docs/img/08-authorization/04.png" /></p>
+<p><img alt="04" src="../img/08-authorization/04.png" /></p>
 <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">ApplicationController</span> <span class="o">&lt;</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">API</span>
   <span class="k">def</span> <span class="nf">current_user</span>
     <span class="c1"># If test situation when user is logged in</span>
