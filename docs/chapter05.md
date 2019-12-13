@@ -8,7 +8,7 @@ In this chapter we will implement the feature to create a new post.
 
 ## Step1. Run generator command
 
-![01](./docs/img/05-mutation-create/01.png)
+![01](./img/05-mutation-create/01.png)
 https://graphql-ruby.org/schema/generators.html#scaffolding-mutations
 
 `terminal`
@@ -60,7 +60,7 @@ end
 
 ## Step2. Create `base_mutation.rb`
 
-![02](./docs/img/05-mutation-create/02.png)
+![02](./img/05-mutation-create/02.png)
 
 https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class
 
@@ -74,7 +74,7 @@ end
 
 ## Step3. Modify /mutations/create_post.rb
 
-![03](./docs/img/05-mutation-create/03.png)
+![03](./img/05-mutation-create/03.png)
 https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class
 
 Just imitate official docs.
@@ -115,11 +115,11 @@ end
 
 ## Step4 Test in grahpiql
 ### 1. createPost mutation
-![04](./docs/img/05-mutation-create/04.png)
+![04](./img/05-mutation-create/04.png)
 
 
 ### 2. query posts again
-![05](./docs/img/05-mutation-create/05.png)
+![05](./img/05-mutation-create/05.png)
 
 Finish!
 

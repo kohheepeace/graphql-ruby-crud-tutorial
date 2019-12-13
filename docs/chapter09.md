@@ -45,10 +45,10 @@ end
 ## Step3 Test it!
 
 ### 1 Destroy existing post
-![01](./docs/img/09-mutation-delete/01.png)
+![01](./img/09-mutation-delete/01.png)
 
 ### 2 query posts
-![02](./docs/img/09-mutation-delete/02.png)
+![02](./img/09-mutation-delete/02.png)
 
 *There is no id: "1" post.
 

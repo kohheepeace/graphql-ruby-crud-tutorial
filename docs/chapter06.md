@@ -121,7 +121,7 @@ end
 
 ## Step3. Show error message when user is not logged in
 
-![01](./docs/img/06-authentication/01.png)
+![01](./img/06-authentication/01.png)
 https://graphql-ruby.org/mutations/mutation_authorization.html
 
 `mutations/create_post.rb`
@@ -168,7 +168,7 @@ end
 ## Step4 Test it!
 ### 1. When there is logged-in user
 *logged-in user is First User.
-![02](./docs/img/06-authentication/02.png)
+![02](./img/06-authentication/02.png)
 
 
 ### 2. When user does not log in
@@ -186,7 +186,7 @@ class ApplicationController < ActionController::API
 end
 ```
 
-![03](./docs/img/06-authentication/03.png)
+![03](./img/06-authentication/03.png)
 
 Finish!
 

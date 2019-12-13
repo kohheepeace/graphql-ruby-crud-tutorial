@@ -24,7 +24,7 @@ add_root_type  mutation
 ## Step2 modify `update_post.rb`
 
 In https://graphql-ruby.org/mutations/mutation_errors, you can see the example of `post.update`
-![01](./docs/img/07-mutation-update/01.png)
+![01](./img/07-mutation-update/01.png)
 
 So, imitate this and modify code...
 
@@ -57,7 +57,7 @@ end
 You can find similar example here
 
 https://graphql-ruby.org/type_definitions/input_objects.html#defining-input-object-types
-![02](./docs/img/07-mutation-update/02.png)
+![02](./img/07-mutation-update/02.png)
 
 
 create new file `graphql/types/post_attributes.rb`
@@ -74,5 +74,5 @@ end
 Of course, you can refactor `create_post.rb` to use `PostAttributes`
 
 ## Step4 Test it!
-![03](./docs/img/07-mutation-update/03.png)
+![03](./img/07-mutation-update/03.png)
 

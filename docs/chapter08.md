@@ -11,7 +11,7 @@ Official docs guide recommends...
 1. Loading and authorizing objects
 2. Then, call def authorized? to check user can perform this action
 
-![01](./docs/img/08-authorization/01.png)
+![01](./img/08-authorization/01.png)
 https://graphql-ruby.org/mutations/mutation_authorization.html
 
 ## Step2. But...this is really confusing and it works only for Relay ?
@@ -23,7 +23,7 @@ So, I take another option.
 Look at below issue comment...
 
 @rmosolgo says **"Current best practice is to put auth code at the top of the resolve function"**
-![02](./docs/img/08-authorization/02.png)
+![02](./img/08-authorization/02.png)
 
 Though, this is already "past" best practice, I tried this and it works well. So, I will take this option.
 
@@ -111,10 +111,10 @@ rails cuser = User.create(name: Faker::Name.name, image: Faker::Avatar.image)Pos
 ```
 
 ### 2 If not logged in
-![03](./docs/img/08-authorization/03.png)
+![03](./img/08-authorization/03.png)
 
 ### 3 If logged in and Update other's post
-![04](./docs/img/08-authorization/04.png)
+![04](./img/08-authorization/04.png)
 
 ```ruby
 class ApplicationController < ActionController::API

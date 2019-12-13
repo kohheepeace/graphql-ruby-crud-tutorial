@@ -68,7 +68,7 @@ This means...
 Next, We need to define `PostType`
 
 
-![01](./docs/img/04-query-get/01.png)
+![01](./img/04-query-get/01.png)
 https://graphql-ruby.org/getting_started#getting-started
 
 `terminal`
@@ -91,7 +91,7 @@ end
 ```
 
 Imitate official guide, we will add `description` and `id`.
-![02](./docs/img/04-query-get/02.png)
+![02](./img/04-query-get/02.png)
 https://graphql-ruby.org/getting_started#declare-types
 
 so...
@@ -113,7 +113,7 @@ end
 visit: http://api.localhost:3000/graphiql​
 
 Query by using graphiql...
-![03](./docs/img/04-query-get/03.png)
+![03](./img/04-query-get/03.png)
 
 It works!!!
 
@@ -122,7 +122,7 @@ It works!!!
 Here we will recap the flow!!!
 
 1. query posts from graphiql 
-![04](./docs/img/04-query-get/04.png)
+![04](./img/04-query-get/04.png)
 ​
 
 Check the terminal log!
