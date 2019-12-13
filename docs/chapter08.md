@@ -1,6 +1,6 @@
 # Chap8 Authorization
-**Goal of this chapter**
-- implement the feature to update post
+!!! abstract "Goal of this chapter"
+    - implement the feature to update post
 
 **Reference to official docs**
 https://graphql-ruby.org/mutations/mutation_authorization.html

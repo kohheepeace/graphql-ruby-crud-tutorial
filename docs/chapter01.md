@@ -1,7 +1,6 @@
 # Chap1 Rails Api App setup
-**Goal of this chapter**
-
-1. Just Create Rails Api app
+!!! abstract "Goal of this chapter"
+    1. Just Create Rails Api app
 
 ​
 

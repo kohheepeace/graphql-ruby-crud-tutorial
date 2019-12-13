@@ -1,6 +1,8 @@
 # Chap5 Mutation(CREATE)
-**Goal of this chapter** 
-- Implement feature to create post
+!!! abstract "Goal of this chapter"
+    - Implement feature to create post
+
+
 
 In this chapter we will implement the feature to create a new post.
 

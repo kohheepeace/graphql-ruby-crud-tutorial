@@ -1,7 +1,7 @@
 # Chap7 Mutation(UPDATE)
 
-**Goal of this chapter**
-- implement the feature to update post
+!!! abstract "Goal of this chapter"
+    - implement the feature to update post
 
 Ref: https://graphql-ruby.org/schema/generators.html#scaffolding-mutations
 

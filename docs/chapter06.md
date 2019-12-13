@@ -1,6 +1,6 @@
 # Chap6 Authentication
-**Goal of this chapter**
-- Only logged in user can create post
+!!! abstract "Goal of this chapter"
+    - Only logged in user can create post
 
 
 **Related official docs**

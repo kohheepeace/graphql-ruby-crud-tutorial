@@ -1,6 +1,7 @@
 # Chap4 Query(GET)
-**Goal of this chapter**
-1. Implement Query(GET)
+
+!!! abstract "Goal of this chapter"
+    1. Implement Query(GET)
 
 In this chapter we will try to implement Query.
 

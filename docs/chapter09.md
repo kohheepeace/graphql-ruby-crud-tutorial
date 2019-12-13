@@ -1,5 +1,7 @@
 # Chap9 Mutation(DELETE)
-This chapter we are doing just the same things we've already done!
+
+!!! abstract "Goal of this chapter"
+    This chapter we are doing just the same things we've already done!
 
 ## Step1 generate `destroy_post` mutation
 

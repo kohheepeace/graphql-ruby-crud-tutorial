@@ -1,7 +1,8 @@
 # Chap3 Create model and Dummy data
-**Goal of this chapter**
-1. Create User and Post model
-2. Create dummy data
+
+!!! abstract "Goal of this chapter"
+    1. Create User and Post model
+    2. Create dummy data
 
 *This chapter is not related with graphql-ruby!
 

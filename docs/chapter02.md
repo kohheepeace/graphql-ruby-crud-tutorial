@@ -1,8 +1,8 @@
 # Chap2 `graphql-ruby` gem Setup
-**Goal of this chapter**
 
-1. Setup graphql-ruby
-2. Setup graphiql-rails
+!!! abstract "Goal of this chapter"
+    1. Setup graphql-ruby
+    2. Setup graphiql-rails
 
 
 **Related official docs part**: https://graphql-ruby.org/getting_started​

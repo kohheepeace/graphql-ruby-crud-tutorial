@@ -1,0 +1,587 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Chap3 Create model and Dummy data - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../docs/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#chap3-create-model-and-dummy-data" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="My Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              My Docs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Chap3 Create model and Dummy data
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter01/" title="Chap1 Rails Api App setup" class="md-nav__link">
+      Chap1 Rails Api App setup
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter02/" title="Chap2 `graphql-ruby` gem Setup" class="md-nav__link">
+      Chap2 `graphql-ruby` gem Setup
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Chap3 Create model and Dummy data
+      </label>
+    
+    <a href="./" title="Chap3 Create model and Dummy data" class="md-nav__link md-nav__link--active">
+      Chap3 Create model and Dummy data
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step1-create-user" class="md-nav__link">
+    Step1. Create User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-create-post-model" class="md-nav__link">
+    Step2. Create Post model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step3-edit-userrb" class="md-nav__link">
+    Step3. Edit user.rb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step4-edit-postrb" class="md-nav__link">
+    Step4. Edit post.rb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step5-create-dummy-data" class="md-nav__link">
+    Step5. Create dummy data
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter04/" title="Chap4 Query(GET)" class="md-nav__link">
+      Chap4 Query(GET)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter05/" title="Chap5 Mutation(CREATE)" class="md-nav__link">
+      Chap5 Mutation(CREATE)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter06/" title="Chap6 Authentication" class="md-nav__link">
+      Chap6 Authentication
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter07/" title="Chap7 Mutation(UPDATE)" class="md-nav__link">
+      Chap7 Mutation(UPDATE)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter08/" title="Chap8 Authorization" class="md-nav__link">
+      Chap8 Authorization
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter09/" title="Chap9 Mutation(DELETE)" class="md-nav__link">
+      Chap9 Mutation(DELETE)
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step1-create-user" class="md-nav__link">
+    Step1. Create User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-create-post-model" class="md-nav__link">
+    Step2. Create Post model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step3-edit-userrb" class="md-nav__link">
+    Step3. Edit user.rb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step4-edit-postrb" class="md-nav__link">
+    Step4. Edit post.rb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step5-create-dummy-data" class="md-nav__link">
+    Step5. Create dummy data
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="chap3-create-model-and-dummy-data">Chap3 Create model and Dummy data</h1>
+<p><strong>Goal of this chapter</strong>
+1. Create User and Post model
+2. Create dummy data</p>
+<p>*This chapter is not related with graphql-ruby!</p>
+<h2 id="step1-create-user">Step1. Create User</h2>
+<p><code class="codehilite"><span class="n">terminal</span></code>
+<div class="codehilite"><pre><span></span>rails g model User name image
+rails db:migrate
+</pre></div></p>
+<h2 id="step2-create-post-model">Step2. Create Post model</h2>
+<p><code class="codehilite"><span class="n">teminal</span></code>
+<div class="codehilite"><pre><span></span>rails g model Post title body user:references
+rails db:migrate
+</pre></div></p>
+<h2 id="step3-edit-userrb">Step3. Edit user.rb</h2>
+<p><code class="codehilite"><span class="n">models</span><span class="o">/</span><span class="k">user</span><span class="p">.</span><span class="n">rb</span></code>
+<div class="codehilite"><pre><span></span><span class="c1"># == Schema Information</span>
+<span class="c1">#</span>
+<span class="c1"># Table name: users</span>
+<span class="c1">#</span>
+<span class="c1">#  id         :bigint(8)        not null, primary key</span>
+<span class="c1">#  image      :string</span>
+<span class="c1">#  name       :string</span>
+<span class="c1">#  created_at :datetime         not null</span>
+<span class="c1">#  updated_at :datetime         not null</span>
+<span class="c1">#</span>
+
+<span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">validates</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">presence</span><span class="p">:</span> <span class="kp">true</span> <span class="c1"># this is up to you</span>
+  <span class="n">has_many</span> <span class="ss">:posts</span><span class="p">,</span> <span class="ss">dependent</span><span class="p">:</span> <span class="ss">:destroy</span>
+<span class="k">end</span>
+</pre></div></p>
+<h2 id="step4-edit-postrb">Step4. Edit post.rb</h2>
+<p>*This is validation is up to your use-case.</p>
+<p><code class="codehilite"><span class="n">models</span><span class="o">/</span><span class="n">post</span><span class="p">.</span><span class="n">rb</span></code>
+<div class="codehilite"><pre><span></span><span class="c1"># == Schema Information</span>
+<span class="c1">#</span>
+<span class="c1"># Table name: posts</span>
+<span class="c1">#</span>
+<span class="c1">#  id         :bigint(8)        not null, primary key</span>
+<span class="c1">#  body       :string</span>
+<span class="c1">#  title      :string</span>
+<span class="c1">#  created_at :datetime         not null</span>
+<span class="c1">#  updated_at :datetime         not null</span>
+<span class="c1">#  user_id    :bigint(8)</span>
+<span class="c1">#</span>
+<span class="c1"># Indexes</span>
+<span class="c1">#</span>
+<span class="c1">#  index_posts_on_user_id  (user_id)</span>
+<span class="c1">#</span>
+<span class="c1"># Foreign Keys</span>
+<span class="c1">#</span>
+<span class="c1">#  fk_rails_...  (user_id =&gt; users.id)</span>
+<span class="c1">#</span>
+
+<span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">validates</span> <span class="ss">:title</span><span class="p">,</span> <span class="ss">presence</span><span class="p">:</span> <span class="kp">true</span>
+  <span class="n">validates</span> <span class="ss">:body</span><span class="p">,</span> <span class="ss">presence</span><span class="p">:</span> <span class="kp">true</span>
+  <span class="n">belongs_to</span> <span class="ss">:user</span>
+<span class="k">end</span>
+</pre></div></p>
+<h2 id="step5-create-dummy-data">Step5. Create dummy data</h2>
+<p><code class="codehilite"><span class="n">Gemfile</span></code>
+<div class="codehilite"><pre><span></span><span class="p">...</span>
+<span class="n">gem</span> <span class="s1">&#39;faker&#39;</span><span class="p">,</span> <span class="p">:</span><span class="n">git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/stympy/faker.git&#39;</span><span class="p">,</span> <span class="p">:</span><span class="n">branch</span> <span class="o">=&gt;</span> <span class="s1">&#39;master&#39;</span>
+</pre></div></p>
+<p><code class="codehilite"><span class="n">terminal</span></code>
+<div class="codehilite"><pre><span></span>bundle
+</pre></div></p>
+<p><code class="codehilite"><span class="n">terminal</span></code>
+<div class="codehilite"><pre><span></span>rails c
+User.create<span class="o">(</span>name: Faker::Name.name, image: Faker::Avatar.image<span class="o">)</span>
+Post.create<span class="o">(</span>title: Faker::Book.title, body: Faker::Lorem.paragraph, user_id:1<span class="o">)</span>
+</pre></div>
+​
+​Finish!</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../chapter02/" title="Chap2 `graphql-ruby` gem Setup" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Chap2 `graphql-ruby` gem Setup
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../chapter04/" title="Chap4 Query(GET)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Chap4 Query(GET)
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
