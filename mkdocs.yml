@@ -1,0 +1,39 @@
+site_name: My Docs
+theme:
+  name: 'material'
+  palette:
+    primary: 'blue'
+    accent: 'blue'
+nav:
+    - Introduction: index.md
+    - Chap1 Rails Api App setup: chapter01.md
+    - Chap2 `graphql-ruby` gem Setup: chapter02.md
+    - Chap3 Create model and Dummy data: chapter03.md
+    - Chap4 Query(GET): chapter04.md
+    - Chap5 Mutation(CREATE): chapter05.md
+    - Chap6 Authentication: chapter06.md
+    - Chap7 Mutation(UPDATE): chapter07.md
+    - Chap8 Authorization: chapter08.md
+    - Chap9 Mutation(DELETE): chapter09.md
+    
+markdown_extensions:
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - codehilite
+  - admonition
+extra_css:
+  - 'docs/stylesheets/extra.css'
