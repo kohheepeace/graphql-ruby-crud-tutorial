@@ -1,6 +1,9 @@
 # Introduction
 This is a graphql-ruby CRUD tutorial.
 
+
+## Docs
+https://kohheepeace.github.io/graphql-ruby-crud-tutorial/
 ​
 
 ## What you will learn ?
