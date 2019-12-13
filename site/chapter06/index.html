@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../docs/stylesheets/extra.css">
     
     
       
@@ -558,7 +558,7 @@ You can use context[:xxxxxxx] like this.</p>
 <span class="k">end</span>
 </pre></div></p>
 <h2 id="step3-show-error-message-when-user-is-not-logged-in">Step3. Show error message when user is not logged in</h2>
-<p><img alt="01" src="./img/06-authentication/01.png" />
+<p><img alt="01" src="../img/06-authentication/01.png" />
 <a href="https://graphql-ruby.org/mutations/mutation_authorization.html">https://graphql-ruby.org/mutations/mutation_authorization.html</a></p>
 <p><code class="codehilite"><span class="n">mutations</span><span class="o">/</span><span class="n">create_post</span><span class="p">.</span><span class="n">rb</span></code>
 <div class="codehilite"><pre><span></span><span class="k">module</span> <span class="nn">Mutations</span>
@@ -602,7 +602,7 @@ You can use context[:xxxxxxx] like this.</p>
 <h2 id="step4-test-it">Step4 Test it!</h2>
 <h3 id="1-when-there-is-logged-in-user">1. When there is logged-in user</h3>
 <p>*logged-in user is First User.
-<img alt="02" src="./img/06-authentication/02.png" /></p>
+<img alt="02" src="../img/06-authentication/02.png" /></p>
 <h3 id="2-when-user-does-not-log-in">2. When user does not log in</h3>
 <p>Change current_user to <code class="codehilite"><span class="n">nil</span></code>
 <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">ApplicationController</span> <span class="o">&lt;</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">API</span>
@@ -616,7 +616,7 @@ You can use context[:xxxxxxx] like this.</p>
   <span class="o">...</span>
 <span class="k">end</span>
 </pre></div></p>
-<p><img alt="03" src="./img/06-authentication/03.png" /></p>
+<p><img alt="03" src="../img/06-authentication/03.png" /></p>
 <p>Finish!</p>
                 
                   

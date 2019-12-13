@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../docs/stylesheets/extra.css">
     
     
       
@@ -440,7 +440,7 @@ add_root_type  mutation
 </pre></div></p>
 <h2 id="step2-modify-update_postrb">Step2 modify <code class="codehilite"><span class="n">update_post</span><span class="p">.</span><span class="n">rb</span></code></h2>
 <p>In <a href="https://graphql-ruby.org/mutations/mutation_errors">https://graphql-ruby.org/mutations/mutation_errors</a>, you can see the example of <code class="codehilite"><span class="n">post</span><span class="p">.</span><span class="k">update</span></code>
-<img alt="01" src="./img/07-mutation-update/01.png" /></p>
+<img alt="01" src="../img/07-mutation-update/01.png" /></p>
 <p>So, imitate this and modify code...</p>
 <p><code class="codehilite"><span class="n">mutations</span><span class="o">/</span><span class="n">update_post</span><span class="p">.</span><span class="n">rb</span></code>
 <div class="codehilite"><pre><span></span><span class="k">module</span> <span class="nn">Mutations</span>
@@ -467,7 +467,7 @@ add_root_type  mutation
 <h2 id="step3-define-postattributes">Step3 Define <code class="codehilite"><span class="n">PostAttributes</span></code></h2>
 <p>You can find similar example here</p>
 <p><a href="https://graphql-ruby.org/type_definitions/input_objects.html#defining-input-object-types">https://graphql-ruby.org/type_definitions/input_objects.html#defining-input-object-types</a>
-<img alt="02" src="./img/07-mutation-update/02.png" /></p>
+<img alt="02" src="../img/07-mutation-update/02.png" /></p>
 <p>create new file <code class="codehilite"><span class="n">graphql</span><span class="o">/</span><span class="n">types</span><span class="o">/</span><span class="n">post_attributes</span><span class="p">.</span><span class="n">rb</span></code>
 <div class="codehilite"><pre><span></span><span class="k">module</span> <span class="nn">Types</span>
   <span class="k">class</span> <span class="nc">PostAttributes</span> <span class="o">&lt;</span> <span class="no">Types</span><span class="o">::</span><span class="no">BaseInputObject</span>
@@ -479,7 +479,7 @@ add_root_type  mutation
 </pre></div></p>
 <p>Of course, you can refactor <code class="codehilite"><span class="n">create_post</span><span class="p">.</span><span class="n">rb</span></code> to use <code class="codehilite"><span class="n">PostAttributes</span></code></p>
 <h2 id="step4-test-it">Step4 Test it!</h2>
-<p><img alt="03" src="./img/07-mutation-update/03.png" /></p>
+<p><img alt="03" src="../img/07-mutation-update/03.png" /></p>
                 
                   
                 

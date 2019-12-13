@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../docs/stylesheets/extra.css">
     
     
       
@@ -477,7 +477,7 @@
 </ul>
 <h2 id="step2-define-posttype">Step2 define <code class="codehilite"><span class="n">PostType</span></code></h2>
 <p>Next, We need to define <code class="codehilite"><span class="n">PostType</span></code></p>
-<p><img alt="01" src="./img/04-query-get/01.png" />
+<p><img alt="01" src="../img/04-query-get/01.png" />
 <a href="https://graphql-ruby.org/getting_started#getting-started">https://graphql-ruby.org/getting_started#getting-started</a></p>
 <p><code class="codehilite"><span class="n">terminal</span></code>
 <div class="codehilite"><pre><span></span>rails g graphql:object Post title:String body:String
@@ -495,7 +495,7 @@ Running via Spring preloader in process <span class="m">62001</span>
 <span class="k">end</span>
 </pre></div></p>
 <p>Imitate official guide, we will add <code class="codehilite"><span class="n">description</span></code> and <code class="codehilite"><span class="n">id</span></code>.
-<img alt="02" src="./img/04-query-get/02.png" />
+<img alt="02" src="../img/04-query-get/02.png" />
 <a href="https://graphql-ruby.org/getting_started#declare-types">https://graphql-ruby.org/getting_started#declare-types</a></p>
 <p>so...</p>
 <p><code class="codehilite"><span class="n">post_type</span><span class="p">.</span><span class="n">rb</span></code>
@@ -512,13 +512,13 @@ Running via Spring preloader in process <span class="m">62001</span>
 <h2 id="step3-run-query-from-graphiql">Step3 Run query from graphiql</h2>
 <p>visit: <a href="http://api.localhost:3000/graphiql">http://api.localhost:3000/graphiql</a>​</p>
 <p>Query by using graphiql...
-<img alt="03" src="./img/04-query-get/03.png" /></p>
+<img alt="03" src="../img/04-query-get/03.png" /></p>
 <p>It works!!!</p>
 <h2 id="step4-recap-the-flow">Step4 Recap the flow</h2>
 <p>Here we will recap the flow!!!</p>
 <ol>
 <li>query posts from graphiql 
-<img alt="04" src="./img/04-query-get/04.png" />
+<img alt="04" src="../img/04-query-get/04.png" />
 ​</li>
 </ol>
 <p>Check the terminal log!</p>
