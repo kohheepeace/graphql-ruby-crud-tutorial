@@ -1,0 +1,634 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Chap5 Mutation(CREATE) - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../docs/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#chap5-mutationcreate" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="My Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              My Docs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Chap5 Mutation(CREATE)
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter01/" title="Chap1 Rails Api App setup" class="md-nav__link">
+      Chap1 Rails Api App setup
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter02/" title="Chap2 `graphql-ruby` gem Setup" class="md-nav__link">
+      Chap2 `graphql-ruby` gem Setup
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter03/" title="Chap3 Create model and Dummy data" class="md-nav__link">
+      Chap3 Create model and Dummy data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter04/" title="Chap4 Query(GET)" class="md-nav__link">
+      Chap4 Query(GET)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Chap5 Mutation(CREATE)
+      </label>
+    
+    <a href="./" title="Chap5 Mutation(CREATE)" class="md-nav__link md-nav__link--active">
+      Chap5 Mutation(CREATE)
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step1-run-generator-command" class="md-nav__link">
+    Step1. Run generator command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-create-base_mutationrb" class="md-nav__link">
+    Step2. Create base_mutation.rb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step3-modify-mutationscreate_postrb" class="md-nav__link">
+    Step3. Modify /mutations/create_post.rb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step4-test-in-grahpiql" class="md-nav__link">
+    Step4 Test in grahpiql
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-createpost-mutation" class="md-nav__link">
+    1. createPost mutation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-query-posts-again" class="md-nav__link">
+    2. query posts again
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter06/" title="Chap6 Authentication" class="md-nav__link">
+      Chap6 Authentication
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter07/" title="Chap7 Mutation(UPDATE)" class="md-nav__link">
+      Chap7 Mutation(UPDATE)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter08/" title="Chap8 Authorization" class="md-nav__link">
+      Chap8 Authorization
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../chapter09/" title="Chap9 Mutation(DELETE)" class="md-nav__link">
+      Chap9 Mutation(DELETE)
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step1-run-generator-command" class="md-nav__link">
+    Step1. Run generator command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-create-base_mutationrb" class="md-nav__link">
+    Step2. Create base_mutation.rb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step3-modify-mutationscreate_postrb" class="md-nav__link">
+    Step3. Modify /mutations/create_post.rb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step4-test-in-grahpiql" class="md-nav__link">
+    Step4 Test in grahpiql
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-createpost-mutation" class="md-nav__link">
+    1. createPost mutation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-query-posts-again" class="md-nav__link">
+    2. query posts again
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="chap5-mutationcreate">Chap5 Mutation(CREATE)</h1>
+<p><strong>Goal of this chapter</strong> 
+- Implement feature to create post</p>
+<p>In this chapter we will implement the feature to create a new post.</p>
+<h2 id="step1-run-generator-command">Step1. Run generator command</h2>
+<p><img alt="01" src="./docs/img/05-mutation-create/01.png" />
+<a href="https://graphql-ruby.org/schema/generators.html#scaffolding-mutations">https://graphql-ruby.org/schema/generators.html#scaffolding-mutations</a></p>
+<p><code class="codehilite"><span class="n">terminal</span></code>
+<div class="codehilite"><pre><span></span>rails g graphql:mutation create_post
+Running via Spring preloader in process <span class="m">63092</span>
+       exist  app/graphql/mutations
+   identical  app/graphql/mutations/.keep
+   identical  app/graphql/types/mutation_type.rb
+add_root_type  mutation
+      create  app/graphql/mutations/create_post.rb
+        gsub  app/graphql/types/mutation_type.rb
+</pre></div></p>
+<p>This command creates <code class="codehilite"><span class="n">app</span><span class="o">/</span><span class="n">graphql</span><span class="o">/</span><span class="n">mutations</span><span class="o">/</span><span class="n">create_post</span><span class="p">.</span><span class="n">rb</span></code> and modify <code class="codehilite"><span class="n">app</span><span class="o">/</span><span class="n">graphql</span><span class="o">/</span><span class="n">types</span><span class="o">/</span><span class="n">mutation_type</span><span class="p">.</span><span class="n">rb</span></code></p>
+<p><code class="codehilite"><span class="n">app</span><span class="o">/</span><span class="n">graphql</span><span class="o">/</span><span class="n">mutations</span><span class="o">/</span><span class="n">create_post</span><span class="p">.</span><span class="n">rb</span></code>
+<div class="codehilite"><pre><span></span><span class="k">module</span> <span class="nn">Mutations</span>
+  <span class="k">class</span> <span class="nc">CreatePost</span> <span class="o">&lt;</span> <span class="no">GraphQL</span><span class="o">::</span><span class="no">Schema</span><span class="o">::</span><span class="no">RelayClassicMutation</span>
+    <span class="c1"># TODO: define return fields</span>
+    <span class="c1"># field :post, Types::PostType, null: false</span>
+
+    <span class="c1"># TODO: define arguments</span>
+    <span class="c1"># argument :name, String, required: true</span>
+
+    <span class="c1"># TODO: define resolve method</span>
+    <span class="c1"># def resolve(name:)</span>
+    <span class="c1">#   { post: ... }</span>
+    <span class="c1"># end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div></p>
+<p><code class="codehilite"><span class="n">app</span><span class="o">/</span><span class="n">graphql</span><span class="o">/</span><span class="n">types</span><span class="o">/</span><span class="n">mutation_type</span><span class="p">.</span><span class="n">rb</span></code>
+<div class="codehilite"><pre><span></span><span class="k">module</span> <span class="nn">Types</span>
+  <span class="k">class</span> <span class="nc">MutationType</span> <span class="o">&lt;</span> <span class="no">Types</span><span class="o">::</span><span class="no">BaseObject</span>
+    <span class="n">field</span> <span class="ss">:createPost</span><span class="p">,</span> <span class="ss">mutation</span><span class="p">:</span> <span class="no">Mutations</span><span class="o">::</span><span class="no">CreatePost</span>
+    <span class="c1"># TODO: remove me</span>
+    <span class="n">field</span> <span class="ss">:test_field</span><span class="p">,</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">null</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+      <span class="ss">description</span><span class="p">:</span> <span class="s2">&quot;An example field added by the generator&quot;</span>
+    <span class="k">def</span> <span class="nf">test_field</span>
+      <span class="s2">&quot;Hello World&quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div></p>
+<h2 id="step2-create-base_mutationrb">Step2. Create <code class="codehilite"><span class="n">base_mutation</span><span class="p">.</span><span class="n">rb</span></code></h2>
+<p><img alt="02" src="./docs/img/05-mutation-create/02.png" /></p>
+<p><a href="https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class">https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class</a></p>
+<p>Create <code class="codehilite"><span class="n">graphql</span><span class="o">/</span><span class="n">mutations</span><span class="o">/</span><span class="n">base_mutation</span><span class="p">.</span><span class="n">rb</span></code></p>
+<div class="codehilite"><pre><span></span><span class="c1"># We use GraphQL::Schema::Mutation not GraphQL::Schema::RelayClassicMutation# Because I use apollo-client</span>
+<span class="k">class</span> <span class="nc">Mutations</span><span class="o">::</span><span class="no">BaseMutation</span> <span class="o">&lt;</span> <span class="no">GraphQL</span><span class="o">::</span><span class="no">Schema</span><span class="o">::</span><span class="no">Mutation</span>
+<span class="k">end</span>
+</pre></div>
+
+<h2 id="step3-modify-mutationscreate_postrb">Step3. Modify /mutations/create_post.rb</h2>
+<p><img alt="03" src="./docs/img/05-mutation-create/03.png" />
+<a href="https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class">https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class</a></p>
+<p>Just imitate official docs.</p>
+<p><code class="codehilite"><span class="n">mutations</span><span class="o">/</span><span class="n">create_post</span><span class="p">.</span><span class="n">rb</span></code>
+<div class="codehilite"><pre><span></span><span class="k">module</span> <span class="nn">Mutations</span>
+  <span class="c1"># inherit Mutations::BaseMutation</span>
+  <span class="k">class</span> <span class="nc">CreatePost</span> <span class="o">&lt;</span> <span class="no">Mutations</span><span class="o">::</span><span class="no">BaseMutation</span>
+    <span class="c1"># Define what type of value to be returned</span>
+    <span class="n">field</span> <span class="ss">:post</span><span class="p">,</span> <span class="no">Types</span><span class="o">::</span><span class="no">PostType</span><span class="p">,</span> <span class="ss">null</span><span class="p">:</span> <span class="kp">false</span>
+
+    <span class="c1"># Define what argument this mutation accepts</span>
+    <span class="n">argument</span> <span class="ss">:title</span><span class="p">,</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">required</span><span class="p">:</span> <span class="kp">true</span>
+    <span class="n">argument</span> <span class="ss">:body</span><span class="p">,</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">required</span><span class="p">:</span> <span class="kp">true</span>
+
+    <span class="k">def</span> <span class="nf">resolve</span><span class="p">(</span><span class="ss">title</span><span class="p">:,</span> <span class="ss">body</span><span class="p">:)</span>
+      <span class="c1"># we will use current_user in future</span>
+      <span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">first</span>
+      <span class="n">post</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">posts</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">title</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="ss">body</span><span class="p">:</span> <span class="n">body</span><span class="p">)</span>
+      <span class="c1"># Here returns post field, which is defined above.</span>
+      <span class="k">if</span> <span class="n">post</span><span class="o">.</span><span class="n">save</span>
+        <span class="p">{</span>
+          <span class="ss">post</span><span class="p">:</span> <span class="n">post</span><span class="p">,</span>
+          <span class="ss">errors</span><span class="p">:</span> <span class="o">[]</span><span class="p">,</span>
+        <span class="p">}</span>
+      <span class="k">else</span>
+        <span class="c1"># Failed save, return the errors to the client</span>
+        <span class="p">{</span>
+          <span class="ss">post</span><span class="p">:</span> <span class="kp">nil</span><span class="p">,</span>
+          <span class="ss">errors</span><span class="p">:</span> <span class="n">post</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">full_messages</span>
+        <span class="p">}</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div></p>
+<h2 id="step4-test-in-grahpiql">Step4 Test in grahpiql</h2>
+<h3 id="1-createpost-mutation">1. createPost mutation</h3>
+<p><img alt="04" src="./docs/img/05-mutation-create/04.png" /></p>
+<h3 id="2-query-posts-again">2. query posts again</h3>
+<p><img alt="05" src="./docs/img/05-mutation-create/05.png" /></p>
+<p>Finish!</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../chapter04/" title="Chap4 Query(GET)" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Chap4 Query(GET)
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../chapter06/" title="Chap6 Authentication" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Chap6 Authentication
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
