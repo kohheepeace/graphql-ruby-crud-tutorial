@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: Graphql Ruby CRUD Tutorial
 theme:
   name: 'material'
   palette:
