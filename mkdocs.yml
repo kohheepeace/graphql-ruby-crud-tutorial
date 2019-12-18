@@ -36,4 +36,4 @@ markdown_extensions:
   - codehilite
   - admonition
 extra_css:
-  - 'docs/stylesheets/extra.css'
+  - 'stylesheets/extra.css'
