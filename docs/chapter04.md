@@ -1,13 +1,9 @@
-# Chap4 Query(GET)
+# Chap4 Query(READ)
 
-!!! abstract "Goal of this chapter"
-    1. Implement Query(GET)
+## Todo in this chapter
+- Implement Query(READ)
 
-In this chapter we will try to implement Query.
-
-**Query is equivalent to Rest GET request.**
-
-## Step1 Edit `query_type.rb`
+## Step1. Edit `query_type.rb`
 
 This is initial `graphql/types/query_type.rb` file.
 ```ruby
@@ -63,13 +59,12 @@ This means...
 - field posts is array of PostType and It is ok to return nullable value.
 - posts method returns Post.all
 
-## Step2 define `PostType`
+## Step2. define `PostType`
 
-Next, We need to define `PostType`
+Next, We need to define `PostType`.
 
-
-![01](./img/04-query-get/01.png)
 https://graphql-ruby.org/getting_started#getting-started
+
 
 `terminal`
 ```bash
@@ -79,7 +74,7 @@ Running via Spring preloader in process 62001
       create  app/graphql/types/post_type.rb
 ```
 
-This generates the below code.
+This generates the below code:
 `types/post_type.rb`
 ```ruby
 module Types
@@ -108,9 +103,9 @@ module Types
 end
 ```
 ​
-## Step3 Run query from graphiql
+## Step3. Run query from graphiql
 
-visit: http://api.localhost:3000/graphiql​
+Visit: http://api.localhost:3000/graphiql​
 
 Query by using graphiql...
 ![03](./img/04-query-get/03.png)
@@ -118,18 +113,17 @@ Query by using graphiql...
 It works!!!
 
 
-## Step4 Recap the flow
-Here we will recap the flow!!!
+## Step4. Recap the flow
 
-1. query posts from graphiql 
+### (1). query posts from graphiql 
 ![04](./img/04-query-get/04.png)
 ​
 
 Check the terminal log!
 
-2. `POST "/graphql"` is fired.
+### (2). `POST "/graphql"` is fired.
 
-3. It fires `GraphqlController#execute` action.
+### (3). It fires `GraphqlController#execute` action.
 
 `terminal`
 ```bash
@@ -141,7 +135,7 @@ Processing by GraphqlController#execute as */*
 Completed 200 OK in 40ms (Views: 0.3ms | ActiveRecord: 11.1ms)
 ```
 
-4. In def execute action, query is executed.
+### (4). In `def execute`, query is executed.
 
 `graphql_controller.rb`
 ```ruby
@@ -165,9 +159,7 @@ end
 ```
 ​
 
-`RailsApiGraphqlCrudTutoSchema` is defined in...
-
-`rails_api_graphql_crud_tuto_schema.rb`
+- `RailsApiGraphqlCrudTutoSchema` is defined in: `rails_api_graphql_crud_tuto_schema.rb`
 ```ruby
 class RailsApiGraphqlCrudTutoSchema < GraphQL::Schema
   mutation(Types::MutationType)
@@ -175,9 +167,7 @@ class RailsApiGraphqlCrudTutoSchema < GraphQL::Schema
 end
 ```
 
-`Types::QueryType` is defined in...
-
-`types/query_type.rb`
+- `Types::QueryType` is defined in: `types/query_type.rb`
 ```ruby
 module Types
   class QueryType < Types::BaseObject
@@ -199,9 +189,7 @@ module Types
 end
 ```
 
-`PostType` is defined in...
-
-`types/post_type.rb`
+- `PostType` is defined in: `types/post_type.rb`
 ```ruby
 module Types
   class PostType < Types::BaseObject

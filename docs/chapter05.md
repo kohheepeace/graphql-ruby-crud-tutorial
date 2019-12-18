@@ -1,10 +1,8 @@
 # Chap5 Mutation(CREATE)
-!!! abstract "Goal of this chapter"
-    - Implement feature to create post
 
+## Todo in this chapter
+- Implement feature to create post
 
-
-In this chapter we will implement the feature to create a new post.
 
 ## Step1. Run generator command
 
@@ -12,7 +10,7 @@ In this chapter we will implement the feature to create a new post.
 https://graphql-ruby.org/schema/generators.html#scaffolding-mutations
 
 `terminal`
-```bash
+```bash hl_lines="1"
 rails g graphql:mutation create_post
 Running via Spring preloader in process 63092
        exist  app/graphql/mutations
@@ -23,7 +21,8 @@ add_root_type  mutation
         gsub  app/graphql/types/mutation_type.rb
 ```
 
-This command creates `app/graphql/mutations/create_post.rb` and modify `app/graphql/types/mutation_type.rb`
+- This command creates `app/graphql/mutations/create_post.rb`
+- And modify `app/graphql/types/mutation_type.rb`
 
 `app/graphql/mutations/create_post.rb`
 ```ruby
@@ -64,7 +63,7 @@ end
 
 https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class
 
-Create `graphql/mutations/base_mutation.rb`
+- Create `graphql/mutations/base_mutation.rb`
 
 ```ruby
 # We use GraphQL::Schema::Mutation not GraphQL::Schema::RelayClassicMutation# Because I use apollo-client
@@ -77,7 +76,7 @@ end
 ![03](./img/05-mutation-create/03.png)
 https://graphql-ruby.org/mutations/mutation_classes.html#example-mutation-class
 
-Just imitate official docs.
+- Just imitate official docs:
 
 `mutations/create_post.rb`
 ```ruby
@@ -113,13 +112,15 @@ module Mutations
 end
 ```
 
-## Step4 Test in grahpiql
-### 1. createPost mutation
+## Step4. Test in grahpiql
+### (1). createPost mutation
 ![04](./img/05-mutation-create/04.png)
 
 
-### 2. query posts again
+### (2). query posts again
 ![05](./img/05-mutation-create/05.png)
+- You see new post is included in response.
+
 
 Finish!
 

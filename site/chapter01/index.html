@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#gem-for-auto-check" tabindex="1" class="md-skip">
+      <a href="#chap1-rails-api-app-setup" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -197,6 +197,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Chap1 Rails Api App setup
@@ -210,27 +212,30 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gem-for-auto-check" class="md-nav__link">
-    Gem for auto check
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-annotate_models" class="md-nav__link">
-    - annotate_models​
+  <a href="#todo-in-this-chapter" class="md-nav__link">
+    Todo in this chapter
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#step1-rails-new" class="md-nav__link">
+    Step1 Rails new​
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-add-annotate_models" class="md-nav__link">
+    Step2 Add annotate_models​
+  </a>
   
 </li>
       
@@ -275,8 +280,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../chapter04/" title="Chap4 Query(GET)" class="md-nav__link">
-      Chap4 Query(GET)
+    <a href="../chapter04/" title="Chap4 Query(READ)" class="md-nav__link">
+      Chap4 Query(READ)
     </a>
   </li>
 
@@ -355,27 +360,30 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gem-for-auto-check" class="md-nav__link">
-    Gem for auto check
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-annotate_models" class="md-nav__link">
-    - annotate_models​
+  <a href="#todo-in-this-chapter" class="md-nav__link">
+    Todo in this chapter
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#step1-rails-new" class="md-nav__link">
+    Step1 Rails new​
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-add-annotate_models" class="md-nav__link">
+    Step2 Add annotate_models​
+  </a>
   
 </li>
       
@@ -396,15 +404,12 @@
               
                 
                 
-                  <h1>Chap1 Rails Api App setup</h1>
-                
-                <div class="admonition abstract">
-<p class="admonition-title">Goal of this chapter</p>
-<ol>
-<li>Just Create Rails Api app</li>
-</ol>
-</div>
-<p>​</p>
+                <h1 id="chap1-rails-api-app-setup">Chap1 Rails Api App setup</h1>
+<h2 id="todo-in-this-chapter">Todo in this chapter</h2>
+<ul>
+<li>Create Rails Api app</li>
+</ul>
+<h2 id="step1-rails-new">Step1 Rails new​</h2>
 <p><code class="codehilite"><span class="n">terminal</span></code>
 <div class="codehilite"><pre><span></span>rails new rails-api-graphql-crud-tuto --api -T --database<span class="o">=</span>postgresql
 <span class="nb">cd</span> rails-api-graphql-crud-tuto
@@ -418,25 +423,21 @@ git commit -m <span class="s2">&quot;Initial Commit&quot;</span>
 <div class="codehilite"><pre><span></span>  rails -h  ...  -T, <span class="o">[</span>--skip-test<span class="o">]</span>, <span class="o">[</span>--no-skip-test<span class="o">]</span> <span class="c1"># Skip test files</span>
 </pre></div>
 
-<h2 id="gem-for-auto-check">Gem for auto check</h2>
-<p>​- <a href="https://github.com/ctran/annotate_models">annotate_models</a> - Annotate Rails classes with schema and routes info</p>
-<p>​</p>
-<h3 id="-annotate_models">- annotate_models​</h3>
-<p>To automatically annotate every time you run db:migrate </p>
+<h2 id="step2-add-annotate_models">Step2 Add annotate_models​</h2>
 <p><code class="codehilite"><span class="n">Gemfile</span></code>
-<div class="codehilite"><pre><span></span><span class="nv">group</span> :<span class="nv">development</span> <span class="k">do</span>
-  <span class="nv">gem</span> <span class="s1">&#39;</span><span class="s">annotate</span><span class="s1">&#39;</span>
+<div class="codehilite"><pre><span></span><span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s1">&#39;annotate&#39;</span>
 <span class="k">end</span>
-​```
-
-`<span class="nv">terminal</span>`
-```<span class="nv">bash</span>
-<span class="nv">bundle</span>
-<span class="nv">rails</span> <span class="nv">g</span> <span class="nv">annotate</span>:<span class="nv">install</span>
-​
-<span class="nv">Running</span> <span class="nv">via</span> <span class="nv">Spring</span> <span class="nv">preloader</span> <span class="nv">in</span> <span class="nv">process</span> <span class="mi">53096</span>
-<span class="nv">create</span>  <span class="nv">lib</span><span class="o">/</span><span class="nv">tasks</span><span class="o">/</span><span class="nv">auto_annotate_models</span>.<span class="nv">rake</span>
 </pre></div></p>
+<p><code class="codehilite"><span class="n">terminal</span></code>
+<div class="codehilite"><pre><span></span>bundle
+</pre></div></p>
+<div class="codehilite"><pre><span></span>rails g annotate:install
+​
+Running via Spring preloader in process <span class="m">53096</span>
+create  lib/tasks/auto_annotate_models.rake
+</pre></div>
+
 <p>Ref: <a href="https://github.com/ctran/annotate_models#configuration-in-rails">https://github.com/ctran/annotate_models#configuration-in-rails</a>​</p>
 <p>​</p>
 <p>Finish!</p>

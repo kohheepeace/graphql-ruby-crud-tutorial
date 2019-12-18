@@ -9,7 +9,7 @@ nav:
     - Chap1 Rails Api App setup: chapter01.md
     - Chap2 `graphql-ruby` gem Setup: chapter02.md
     - Chap3 Create model and Dummy data: chapter03.md
-    - Chap4 Query(GET): chapter04.md
+    - Chap4 Query(READ): chapter04.md
     - Chap5 Mutation(CREATE): chapter05.md
     - Chap6 Authentication: chapter06.md
     - Chap7 Mutation(UPDATE): chapter07.md

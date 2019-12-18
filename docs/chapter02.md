@@ -1,15 +1,15 @@
 # Chap2 `graphql-ruby` gem Setup
 
-!!! abstract "Goal of this chapter"
-    1. Setup graphql-ruby
-    2. Setup graphiql-rails
+## Todo in this chapter
+- Setup graphql-ruby
+- Setup graphiql-rails
 
 
-**Related official docs part**: https://graphql-ruby.org/getting_started​
+## Related official docs part:
+https://graphql-ruby.org/getting_started​
 
-​![01](./img/01-graphql-ruby-setup/01.png)
 ​
-## 1. Install graphql-ruby gem
+## Step1. Install graphql-ruby gem
 `Gemfile`
 ```
 gem "graphql"
@@ -42,20 +42,11 @@ add_root_type  mutation
 Skipped graphiql, as this rails project is API only
   You may wish to use GraphiQL.app for development: https://github.com/skevy/graphiql-app
 ```
-
-*Don't be afraid of the files created!
-
-We stop here. Later we create `graphql:object`.
-
 ​
-
-​
-
-## 2. Install graphiql-rails gem
-**Graphiql** is tool like below. we will use it later.
+## Step2. Install graphiql-rails gem
+- **Graphiql** is tool like below.
+- We will use it later.
 ​![02](./img/01-graphql-ruby-setup/02.png)
-​
-
 ​
 
 `Gemfile`
@@ -64,7 +55,7 @@ gem "graphiql-rails"
 ```
 
 
-I want to use subdomain for api, so...
+- I want to use subdomain for api, so...
 
 `config/routes.rb`
 ```ruby
@@ -86,7 +77,7 @@ end
 require "sprockets/railtie"
 ```
 
-*This is only needed if you use subdomain.
+- This is only needed if you use subdomain.
 
 `config/environments/development.rb`
 ```ruby
@@ -98,8 +89,9 @@ Rails.application.configure do
 end
 ```
 ​
+## Step3. Check it
 
-Visit: http://api.localhost:3000/graphiql​
+- Visit: http://api.localhost:3000/graphiql​
 ​
 ​![03](./img/01-graphql-ruby-setup/03.png)
 ​

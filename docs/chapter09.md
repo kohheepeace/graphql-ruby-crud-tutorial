@@ -1,15 +1,15 @@
 # Chap9 Mutation(DELETE)
 
-!!! abstract "Goal of this chapter"
-    This chapter we are doing just the same things we've already done!
+## Todo in this chapter
+- This chapter we are doing just the same things we've already done!
 
-## Step1 generate `destroy_post` mutation
+## Step1. generate `destroy_post` mutation
 
 ```bash
 rails g graphql:mutation destroy_post
 ```
 
-## Step2 Edit `destroy_post` mutation
+## Step2. Edit `destroy_post` mutation
 
 `destory_post.rb`
 ```ruby
@@ -42,14 +42,14 @@ module Mutations
 end
 ```
 
-## Step3 Test it!
+## Step3. Test it!
 
-### 1 Destroy existing post
+### (1). Destroy existing post
 ![01](./img/09-mutation-delete/01.png)
 
-### 2 query posts
+### (2). query posts
 ![02](./img/09-mutation-delete/02.png)
 
-*There is no id: "1" post.
+- There is no id:1 post.
 
 Finish!

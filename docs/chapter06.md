@@ -1,14 +1,15 @@
 # Chap6 Authentication
-!!! abstract "Goal of this chapter"
-    - Only logged in user can create post
+
+## Todo in this chapter
+- Only logged in user can create post
 
 
-**Related official docs**
+## Related official docs
 - https://graphql-ruby.org/authorization/overview.html#what-about-authentication
 - https://graphql-ruby.org/mutations/mutation_authorization.html
 
-## Step1 Define `current_user` method
-In `controllers/graphql_controller.rb`, we can see a comment how to use `current_user`.
+## Step1. Define `current_user` method
+- In `controllers/graphql_controller.rb`, we see a comment how to use `current_user`.
 
 `controllers/graphql_controller.rb`
 ```ruby
@@ -30,7 +31,7 @@ class GraphqlController < ApplicationController
   ...
 ```
 
-Okay let's uncomment this line.
+- uncomment this line.
 
 `controllers/graphql_controller.rb`
 ```ruby
@@ -44,7 +45,7 @@ class GraphqlController < ApplicationController
     ...
 ```
 
-We need to define `current_user` method.
+- We need to define `current_user` method.
 
 `controllers/application_controller.rb`
 ```ruby
@@ -69,7 +70,7 @@ class ApplicationController < ActionController::API
 end
 ```
 
-## Step2 Modify `create_post` mutation
+## Step2. Modify `create_post` mutation
 
 Change this
 
@@ -82,9 +83,9 @@ to
 ```ruby
 post = context[:current_user].posts.new(title: title, body: body)
 ```
-You can use context[:xxxxxxx] like this.
+- You can use context[:xxxxxxx] like this.
 
-So entire code looks...
+- So entire code looks...
 
 `mutations/create_post.rb`
 ```ruby
@@ -165,13 +166,13 @@ module Mutations
 end
 ```
 
-## Step4 Test it!
-### 1. When there is logged-in user
+## Step4. Test it!
+### (1). When there is logged-in user
 *logged-in user is First User.
 ![02](./img/06-authentication/02.png)
 
 
-### 2. When user does not log in
+### (2). When user does not log in
 Change current_user to `nil`
 ```ruby
 class ApplicationController < ActionController::API

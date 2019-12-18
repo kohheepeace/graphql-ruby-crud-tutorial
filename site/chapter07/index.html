@@ -228,8 +228,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../chapter04/" title="Chap4 Query(GET)" class="md-nav__link">
-      Chap4 Query(GET)
+    <a href="../chapter04/" title="Chap4 Query(READ)" class="md-nav__link">
+      Chap4 Query(READ)
     </a>
   </li>
 
@@ -291,29 +291,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#todo-in-this-chapter" class="md-nav__link">
+    Todo in this chapter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-official-docs" class="md-nav__link">
+    Related official docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step1-create-update_post-mutation" class="md-nav__link">
-    Step1 Create update_post mutation
+    Step1. Create update_post mutation
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#step2-modify-update_postrb" class="md-nav__link">
-    Step2 modify update_post.rb
+    Step2. modify update_post.rb
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#step3-define-postattributes" class="md-nav__link">
-    Step3 Define PostAttributes
+    Step3. Define PostAttributes
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#step4-test-it" class="md-nav__link">
-    Step4 Test it!
+    Step4. Test it!
   </a>
   
 </li>
@@ -374,29 +388,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#todo-in-this-chapter" class="md-nav__link">
+    Todo in this chapter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-official-docs" class="md-nav__link">
+    Related official docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step1-create-update_post-mutation" class="md-nav__link">
-    Step1 Create update_post mutation
+    Step1. Create update_post mutation
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#step2-modify-update_postrb" class="md-nav__link">
-    Step2 modify update_post.rb
+    Step2. modify update_post.rb
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#step3-define-postattributes" class="md-nav__link">
-    Step3 Define PostAttributes
+    Step3. Define PostAttributes
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#step4-test-it" class="md-nav__link">
-    Step4 Test it!
+    Step4. Test it!
   </a>
   
 </li>
@@ -419,18 +447,16 @@
                 
                 
                 <h1 id="chap7-mutationupdate">Chap7 Mutation(UPDATE)</h1>
-<div class="admonition abstract">
-<p class="admonition-title">Goal of this chapter</p>
+<h2 id="todo-in-this-chapter">Todo in this chapter</h2>
 <ul>
 <li>implement the feature to update post</li>
 </ul>
-</div>
-<p>Ref: <a href="https://graphql-ruby.org/schema/generators.html#scaffolding-mutations">https://graphql-ruby.org/schema/generators.html#scaffolding-mutations</a></p>
-<p>In this chapter, we will make post update mutation.</p>
-<h2 id="step1-create-update_post-mutation">Step1 Create <code class="codehilite"><span class="n">update_post</span></code> mutation</h2>
+<h2 id="related-official-docs">Related official docs</h2>
+<p><a href="https://graphql-ruby.org/schema/generators.html#scaffolding-mutations">https://graphql-ruby.org/schema/generators.html#scaffolding-mutations</a></p>
+<h2 id="step1-create-update_post-mutation">Step1. Create <code class="codehilite"><span class="n">update_post</span></code> mutation</h2>
 <p><code class="codehilite"><span class="n">terminal</span></code>
-<div class="codehilite"><pre><span></span>rails g graphql:mutation update_post
-Running via Spring preloader in process <span class="m">66514</span>
+<div class="codehilite"><pre><span></span><span class="hll">rails g graphql:mutation update_post
+</span>Running via Spring preloader in process <span class="m">66514</span>
        exist  app/graphql/mutations
    identical  app/graphql/mutations/.keep
         skip  app/graphql/types/mutation_type.rb
@@ -438,10 +464,15 @@ add_root_type  mutation
       create  app/graphql/mutations/update_post.rb
         gsub  app/graphql/types/mutation_type.rb
 </pre></div></p>
-<h2 id="step2-modify-update_postrb">Step2 modify <code class="codehilite"><span class="n">update_post</span><span class="p">.</span><span class="n">rb</span></code></h2>
-<p>In <a href="https://graphql-ruby.org/mutations/mutation_errors">https://graphql-ruby.org/mutations/mutation_errors</a>, you can see the example of <code class="codehilite"><span class="n">post</span><span class="p">.</span><span class="k">update</span></code>
-<img alt="01" src="../img/07-mutation-update/01.png" /></p>
-<p>So, imitate this and modify code...</p>
+<h2 id="step2-modify-update_postrb">Step2. modify <code class="codehilite"><span class="n">update_post</span><span class="p">.</span><span class="n">rb</span></code></h2>
+<ul>
+<li>In <a href="https://graphql-ruby.org/mutations/mutation_errors">https://graphql-ruby.org/mutations/mutation_errors</a></li>
+<li>you can see the example of <code class="codehilite"><span class="n">post</span><span class="p">.</span><span class="k">update</span></code></li>
+</ul>
+<p><img alt="01" src="../img/07-mutation-update/01.png" /></p>
+<ul>
+<li>Imitate and modify code...</li>
+</ul>
 <p><code class="codehilite"><span class="n">mutations</span><span class="o">/</span><span class="n">update_post</span><span class="p">.</span><span class="n">rb</span></code>
 <div class="codehilite"><pre><span></span><span class="k">module</span> <span class="nn">Mutations</span>
   <span class="c1"># Don&#39;t forget to change to Mutations::BaseMutation</span>
@@ -464,11 +495,15 @@ add_root_type  mutation
   <span class="k">end</span>
 <span class="k">end</span>
 </pre></div></p>
-<h2 id="step3-define-postattributes">Step3 Define <code class="codehilite"><span class="n">PostAttributes</span></code></h2>
-<p>You can find similar example here</p>
-<p><a href="https://graphql-ruby.org/type_definitions/input_objects.html#defining-input-object-types">https://graphql-ruby.org/type_definitions/input_objects.html#defining-input-object-types</a>
-<img alt="02" src="../img/07-mutation-update/02.png" /></p>
-<p>create new file <code class="codehilite"><span class="n">graphql</span><span class="o">/</span><span class="n">types</span><span class="o">/</span><span class="n">post_attributes</span><span class="p">.</span><span class="n">rb</span></code>
+<h2 id="step3-define-postattributes">Step3. Define <code class="codehilite"><span class="n">PostAttributes</span></code></h2>
+<ul>
+<li>You can find similar example here:</li>
+</ul>
+<p><a href="https://graphql-ruby.org/type_definitions/input_objects.html#defining-input-object-types">https://graphql-ruby.org/type_definitions/input_objects.html#defining-input-object-types</a></p>
+<p><img alt="02" src="../img/07-mutation-update/02.png" /></p>
+<ul>
+<li>
+<p>Create new file <code class="codehilite"><span class="n">graphql</span><span class="o">/</span><span class="n">types</span><span class="o">/</span><span class="n">post_attributes</span><span class="p">.</span><span class="n">rb</span></code>
 <div class="codehilite"><pre><span></span><span class="k">module</span> <span class="nn">Types</span>
   <span class="k">class</span> <span class="nc">PostAttributes</span> <span class="o">&lt;</span> <span class="no">Types</span><span class="o">::</span><span class="no">BaseInputObject</span>
     <span class="n">description</span> <span class="s2">&quot;Attributes for creating or updating a blog post&quot;</span>
@@ -477,8 +512,12 @@ add_root_type  mutation
   <span class="k">end</span>
 <span class="k">end</span>
 </pre></div></p>
-<p>Of course, you can refactor <code class="codehilite"><span class="n">create_post</span><span class="p">.</span><span class="n">rb</span></code> to use <code class="codehilite"><span class="n">PostAttributes</span></code></p>
-<h2 id="step4-test-it">Step4 Test it!</h2>
+</li>
+<li>
+<p>You can refactor <code class="codehilite"><span class="n">create_post</span><span class="p">.</span><span class="n">rb</span></code> to use <code class="codehilite"><span class="n">PostAttributes</span></code></p>
+</li>
+</ul>
+<h2 id="step4-test-it">Step4. Test it!</h2>
 <p><img alt="03" src="../img/07-mutation-update/03.png" /></p>
                 
                   

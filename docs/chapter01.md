@@ -1,8 +1,10 @@
 # Chap1 Rails Api App setup
-!!! abstract "Goal of this chapter"
-    1. Just Create Rails Api app
 
-​
+## Todo in this chapter
+- Create Rails Api app
+
+
+## Step1 Rails new​
 
 `terminal`
 ```bash
@@ -23,25 +25,21 @@ git commit -m "Initial Commit"
 ```
 
 
-## Gem for auto check
-
-​- [annotate_models](https://github.com/ctran/annotate_models) - Annotate Rails classes with schema and routes info
-
-​
-
-### - annotate_models​
-To automatically annotate every time you run db:migrate 
+## Step2 Add annotate_models​
 
 `Gemfile`
-```
+```ruby
 group :development do
   gem 'annotate'
 end
-​```
+```
 
 `terminal`
 ```bash
 bundle
+```
+
+```bash
 rails g annotate:install
 ​
 Running via Spring preloader in process 53096

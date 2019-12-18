@@ -1,16 +1,16 @@
 # Chap7 Mutation(UPDATE)
 
-!!! abstract "Goal of this chapter"
-    - implement the feature to update post
+## Todo in this chapter
+- implement the feature to update post
 
-Ref: https://graphql-ruby.org/schema/generators.html#scaffolding-mutations
+## Related official docs
+https://graphql-ruby.org/schema/generators.html#scaffolding-mutations
 
-In this chapter, we will make post update mutation.
 
-## Step1 Create `update_post` mutation
+## Step1. Create `update_post` mutation
 
 `terminal`
-```bash
+```bash hl_lines="1"
 rails g graphql:mutation update_post
 Running via Spring preloader in process 66514
        exist  app/graphql/mutations
@@ -21,12 +21,14 @@ add_root_type  mutation
         gsub  app/graphql/types/mutation_type.rb
 ```
 
-## Step2 modify `update_post.rb`
+## Step2. modify `update_post.rb`
 
-In https://graphql-ruby.org/mutations/mutation_errors, you can see the example of `post.update`
+- In https://graphql-ruby.org/mutations/mutation_errors
+- you can see the example of `post.update`
+
 ![01](./img/07-mutation-update/01.png)
 
-So, imitate this and modify code...
+- Imitate and modify code...
 
 `mutations/update_post.rb`
 ```ruby
@@ -52,15 +54,16 @@ module Mutations
 end
 ```
 
-## Step3 Define `PostAttributes`
+## Step3. Define `PostAttributes`
 
-You can find similar example here
+- You can find similar example here:
 
 https://graphql-ruby.org/type_definitions/input_objects.html#defining-input-object-types
+
 ![02](./img/07-mutation-update/02.png)
 
 
-create new file `graphql/types/post_attributes.rb`
+- Create new file `graphql/types/post_attributes.rb`
 ```ruby
 module Types
   class PostAttributes < Types::BaseInputObject
@@ -71,8 +74,8 @@ module Types
 end
 ```
 
-Of course, you can refactor `create_post.rb` to use `PostAttributes`
+- You can refactor `create_post.rb` to use `PostAttributes`
 
-## Step4 Test it!
+## Step4. Test it!
 ![03](./img/07-mutation-update/03.png)
 

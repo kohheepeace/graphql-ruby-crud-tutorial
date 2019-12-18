@@ -1,10 +1,11 @@
 # Chap3 Create model and Dummy data
 
-!!! abstract "Goal of this chapter"
-    1. Create User and Post model
-    2. Create dummy data
+## Todo in this chapter
+- Create User and Post model
+- Create dummy data
 
-*This chapter is not related with graphql-ruby!
+
+**NOTE!!: This chapter is not related with graphql-ruby!**
 
 ## Step1. Create User
 `terminal`
@@ -41,8 +42,6 @@ end
 ```
 
 ## Step4. Edit post.rb
-*This is validation is up to your use-case.
-
 
 `models/post.rb`
 ```ruby

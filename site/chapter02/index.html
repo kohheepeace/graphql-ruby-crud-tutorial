@@ -231,15 +231,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-install-graphql-ruby-gem" class="md-nav__link">
-    1. Install graphql-ruby gem
+  <a href="#todo-in-this-chapter" class="md-nav__link">
+    Todo in this chapter
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-install-graphiql-rails-gem" class="md-nav__link">
-    2. Install graphiql-rails gem
+  <a href="#related-official-docs-part" class="md-nav__link">
+    Related official docs part:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step1-install-graphql-ruby-gem" class="md-nav__link">
+    Step1. Install graphql-ruby gem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-install-graphiql-rails-gem" class="md-nav__link">
+    Step2. Install graphiql-rails gem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step3-check-it" class="md-nav__link">
+    Step3. Check it
   </a>
   
 </li>
@@ -273,8 +294,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../chapter04/" title="Chap4 Query(GET)" class="md-nav__link">
-      Chap4 Query(GET)
+    <a href="../chapter04/" title="Chap4 Query(READ)" class="md-nav__link">
+      Chap4 Query(READ)
     </a>
   </li>
 
@@ -360,15 +381,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-install-graphql-ruby-gem" class="md-nav__link">
-    1. Install graphql-ruby gem
+  <a href="#todo-in-this-chapter" class="md-nav__link">
+    Todo in this chapter
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-install-graphiql-rails-gem" class="md-nav__link">
-    2. Install graphiql-rails gem
+  <a href="#related-official-docs-part" class="md-nav__link">
+    Related official docs part:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step1-install-graphql-ruby-gem" class="md-nav__link">
+    Step1. Install graphql-ruby gem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-install-graphiql-rails-gem" class="md-nav__link">
+    Step2. Install graphiql-rails gem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step3-check-it" class="md-nav__link">
+    Step3. Check it
   </a>
   
 </li>
@@ -391,17 +433,15 @@
                 
                 
                 <h1 id="chap2-graphql-ruby-gem-setup">Chap2 <code class="codehilite"><span class="n">graphql</span><span class="o">-</span><span class="n">ruby</span></code> gem Setup</h1>
-<div class="admonition abstract">
-<p class="admonition-title">Goal of this chapter</p>
-<ol>
+<h2 id="todo-in-this-chapter">Todo in this chapter</h2>
+<ul>
 <li>Setup graphql-ruby</li>
 <li>Setup graphiql-rails</li>
-</ol>
-</div>
-<p><strong>Related official docs part</strong>: <a href="https://graphql-ruby.org/getting_started">https://graphql-ruby.org/getting_started</a>​</p>
-<p>​<img alt="01" src="../img/01-graphql-ruby-setup/01.png" />
-​</p>
-<h2 id="1-install-graphql-ruby-gem">1. Install graphql-ruby gem</h2>
+</ul>
+<h2 id="related-official-docs-part">Related official docs part:</h2>
+<p><a href="https://graphql-ruby.org/getting_started">https://graphql-ruby.org/getting_started</a>​</p>
+<p>​</p>
+<h2 id="step1-install-graphql-ruby-gem">Step1. Install graphql-ruby gem</h2>
 <p><code class="codehilite"><span class="n">Gemfile</span></code>
 <div class="codehilite"><pre><span></span><span class="n">gem</span> <span class="ss">&quot;graphql&quot;</span>
 </pre></div></p>
@@ -430,20 +470,21 @@ add_root_type  mutation
        route  post <span class="s2">&quot;/graphql&quot;</span>, to: <span class="s2">&quot;graphql#execute&quot;</span>
 Skipped graphiql, as this rails project is API only
   You may wish to use GraphiQL.app <span class="k">for</span> development: https://github.com/skevy/graphiql-app
-</pre></div></p>
-<p>*Don't be afraid of the files created!</p>
-<p>We stop here. Later we create <code class="codehilite"><span class="n">graphql</span><span class="o">:</span><span class="n">object</span></code>.</p>
-<p>​</p>
-<p>​</p>
-<h2 id="2-install-graphiql-rails-gem">2. Install graphiql-rails gem</h2>
-<p><strong>Graphiql</strong> is tool like below. we will use it later.
-​<img alt="02" src="../img/01-graphql-ruby-setup/02.png" />
+</pre></div>
 ​</p>
-<p>​</p>
+<h2 id="step2-install-graphiql-rails-gem">Step2. Install graphiql-rails gem</h2>
+<ul>
+<li><strong>Graphiql</strong> is tool like below.</li>
+<li>We will use it later.
+​<img alt="02" src="../img/01-graphql-ruby-setup/02.png" />
+​</li>
+</ul>
 <p><code class="codehilite"><span class="n">Gemfile</span></code>
 <div class="codehilite"><pre><span></span><span class="n">gem</span> <span class="ss">&quot;graphiql-rails&quot;</span>
 </pre></div></p>
-<p>I want to use subdomain for api, so...</p>
+<ul>
+<li>I want to use subdomain for api, so...</li>
+</ul>
 <p><code class="codehilite"><span class="n">config</span><span class="o">/</span><span class="n">routes</span><span class="p">.</span><span class="n">rb</span></code>
 <div class="codehilite"><pre><span></span><span class="no">Rails</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="n">routes</span><span class="o">.</span><span class="n">draw</span> <span class="k">do</span>
   <span class="n">constraints</span> <span class="ss">subdomain</span><span class="p">:</span> <span class="s1">&#39;api&#39;</span> <span class="k">do</span>
@@ -460,7 +501,9 @@ Skipped graphiql, as this rails project is API only
 <div class="codehilite"><pre><span></span><span class="c1"># uncomment out this line</span>
 <span class="nb">require</span> <span class="s2">&quot;sprockets/railtie&quot;</span>
 </pre></div></p>
-<p>*This is only needed if you use subdomain.</p>
+<ul>
+<li>This is only needed if you use subdomain.</li>
+</ul>
 <p><code class="codehilite"><span class="n">config</span><span class="o">/</span><span class="n">environments</span><span class="o">/</span><span class="n">development</span><span class="p">.</span><span class="n">rb</span></code>
 <div class="codehilite"><pre><span></span><span class="no">Rails</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span>
   <span class="o">...</span>
@@ -470,11 +513,14 @@ Skipped graphiql, as this rails project is API only
 <span class="k">end</span>
 </pre></div>
 ​</p>
-<p>Visit: <a href="http://api.localhost:3000/graphiql">http://api.localhost:3000/graphiql</a>​
+<h2 id="step3-check-it">Step3. Check it</h2>
+<ul>
+<li>Visit: <a href="http://api.localhost:3000/graphiql">http://api.localhost:3000/graphiql</a>​
 ​
 ​<img alt="03" src="../img/01-graphql-ruby-setup/03.png" />
 ​
-Finish!</p>
+Finish!</li>
+</ul>
                 
                   
                 

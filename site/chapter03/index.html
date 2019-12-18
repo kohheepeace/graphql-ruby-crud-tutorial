@@ -243,6 +243,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#todo-in-this-chapter" class="md-nav__link">
+    Todo in this chapter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step1-create-user" class="md-nav__link">
     Step1. Create User
   </a>
@@ -294,8 +301,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../chapter04/" title="Chap4 Query(GET)" class="md-nav__link">
-      Chap4 Query(GET)
+    <a href="../chapter04/" title="Chap4 Query(READ)" class="md-nav__link">
+      Chap4 Query(READ)
     </a>
   </li>
 
@@ -381,6 +388,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#todo-in-this-chapter" class="md-nav__link">
+    Todo in this chapter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step1-create-user" class="md-nav__link">
     Step1. Create User
   </a>
@@ -433,14 +447,12 @@
                 
                 
                 <h1 id="chap3-create-model-and-dummy-data">Chap3 Create model and Dummy data</h1>
-<div class="admonition abstract">
-<p class="admonition-title">Goal of this chapter</p>
-<ol>
+<h2 id="todo-in-this-chapter">Todo in this chapter</h2>
+<ul>
 <li>Create User and Post model</li>
 <li>Create dummy data</li>
-</ol>
-</div>
-<p>*This chapter is not related with graphql-ruby!</p>
+</ul>
+<p><strong>NOTE!!: This chapter is not related with graphql-ruby!</strong></p>
 <h2 id="step1-create-user">Step1. Create User</h2>
 <p><code class="codehilite"><span class="n">terminal</span></code>
 <div class="codehilite"><pre><span></span>rails g model User name image
@@ -470,7 +482,6 @@ rails db:migrate
 <span class="k">end</span>
 </pre></div></p>
 <h2 id="step4-edit-postrb">Step4. Edit post.rb</h2>
-<p>*This is validation is up to your use-case.</p>
 <p><code class="codehilite"><span class="n">models</span><span class="o">/</span><span class="n">post</span><span class="p">.</span><span class="n">rb</span></code>
 <div class="codehilite"><pre><span></span><span class="c1"># == Schema Information</span>
 <span class="c1">#</span>
@@ -548,13 +559,13 @@ Post.create<span class="o">(</span>title: Faker::Book.title, body: Faker::Lorem.
           </a>
         
         
-          <a href="../chapter04/" title="Chap4 Query(GET)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../chapter04/" title="Chap4 Query(READ)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Chap4 Query(GET)
+                Chap4 Query(READ)
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
