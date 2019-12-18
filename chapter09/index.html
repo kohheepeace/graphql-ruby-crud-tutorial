@@ -228,8 +228,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../chapter04/" title="Chap4 Query(GET)" class="md-nav__link">
-      Chap4 Query(GET)
+    <a href="../chapter04/" title="Chap4 Query(READ)" class="md-nav__link">
+      Chap4 Query(READ)
     </a>
   </li>
 
@@ -315,22 +315,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#todo-in-this-chapter" class="md-nav__link">
+    Todo in this chapter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step1-generate-destroy_post-mutation" class="md-nav__link">
-    Step1 generate destroy_post mutation
+    Step1. generate destroy_post mutation
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#step2-edit-destroy_post-mutation" class="md-nav__link">
-    Step2 Edit destroy_post mutation
+    Step2. Edit destroy_post mutation
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#step3-test-it" class="md-nav__link">
-    Step3 Test it!
+    Step3. Test it!
   </a>
   
     <nav class="md-nav">
@@ -338,14 +345,14 @@
         
           <li class="md-nav__item">
   <a href="#1-destroy-existing-post" class="md-nav__link">
-    1 Destroy existing post
+    (1). Destroy existing post
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#2-query-posts" class="md-nav__link">
-    2 query posts
+    (2). query posts
   </a>
   
 </li>
@@ -387,22 +394,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#todo-in-this-chapter" class="md-nav__link">
+    Todo in this chapter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step1-generate-destroy_post-mutation" class="md-nav__link">
-    Step1 generate destroy_post mutation
+    Step1. generate destroy_post mutation
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#step2-edit-destroy_post-mutation" class="md-nav__link">
-    Step2 Edit destroy_post mutation
+    Step2. Edit destroy_post mutation
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#step3-test-it" class="md-nav__link">
-    Step3 Test it!
+    Step3. Test it!
   </a>
   
     <nav class="md-nav">
@@ -410,14 +424,14 @@
         
           <li class="md-nav__item">
   <a href="#1-destroy-existing-post" class="md-nav__link">
-    1 Destroy existing post
+    (1). Destroy existing post
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#2-query-posts" class="md-nav__link">
-    2 query posts
+    (2). query posts
   </a>
   
 </li>
@@ -445,15 +459,15 @@
                 
                 
                 <h1 id="chap9-mutationdelete">Chap9 Mutation(DELETE)</h1>
-<div class="admonition abstract">
-<p class="admonition-title">Goal of this chapter</p>
-<p>This chapter we are doing just the same things we've already done!</p>
-</div>
-<h2 id="step1-generate-destroy_post-mutation">Step1 generate <code class="codehilite"><span class="n">destroy_post</span></code> mutation</h2>
+<h2 id="todo-in-this-chapter">Todo in this chapter</h2>
+<ul>
+<li>This chapter we are doing just the same things we've already done!</li>
+</ul>
+<h2 id="step1-generate-destroy_post-mutation">Step1. generate <code class="codehilite"><span class="n">destroy_post</span></code> mutation</h2>
 <div class="codehilite"><pre><span></span>rails g graphql:mutation destroy_post
 </pre></div>
 
-<h2 id="step2-edit-destroy_post-mutation">Step2 Edit <code class="codehilite"><span class="n">destroy_post</span></code> mutation</h2>
+<h2 id="step2-edit-destroy_post-mutation">Step2. Edit <code class="codehilite"><span class="n">destroy_post</span></code> mutation</h2>
 <p><code class="codehilite"><span class="n">destory_post</span><span class="p">.</span><span class="n">rb</span></code>
 <div class="codehilite"><pre><span></span><span class="k">module</span> <span class="nn">Mutations</span>
   <span class="c1"># Don&#39;t forget to change to Mutations::BaseMutation</span>
@@ -483,12 +497,14 @@
   <span class="k">end</span>
 <span class="k">end</span>
 </pre></div></p>
-<h2 id="step3-test-it">Step3 Test it!</h2>
-<h3 id="1-destroy-existing-post">1 Destroy existing post</h3>
+<h2 id="step3-test-it">Step3. Test it!</h2>
+<h3 id="1-destroy-existing-post">(1). Destroy existing post</h3>
 <p><img alt="01" src="../img/09-mutation-delete/01.png" /></p>
-<h3 id="2-query-posts">2 query posts</h3>
+<h3 id="2-query-posts">(2). query posts</h3>
 <p><img alt="02" src="../img/09-mutation-delete/02.png" /></p>
-<p>*There is no id: "1" post.</p>
+<ul>
+<li>There is no id:1 post.</li>
+</ul>
 <p>Finish!</p>
                 
                   
